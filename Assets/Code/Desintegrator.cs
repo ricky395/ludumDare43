@@ -9,6 +9,7 @@ public class Desintegrator : MonoBehaviour {
     {
         if (other.CompareTag("PickableObject"))
         {
+            GameController.instance.DeleteObject(other.gameObject);
             Destroy(other.gameObject);
         }
     }

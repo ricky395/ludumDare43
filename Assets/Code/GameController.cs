@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+
 public class GameController : MonoBehaviour
 {
 
@@ -24,15 +26,15 @@ public class GameController : MonoBehaviour
     public Text name;
     public Text description;
 
-    // Use this for initialization
-    void Start()
-    {
+    List<GameObject> allPickables;
 
+    private void Start()
+    {
+        allPickables = GameObject.FindGameObjectsWithTag("PickableObject").ToList();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DeleteObject(GameObject obj)
     {
-
+        allPickables.Remove(obj);
     }
 }

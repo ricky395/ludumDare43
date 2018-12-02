@@ -7,7 +7,7 @@ public class CharacterGrabObjects : MonoBehaviour
 
     public Transform finalTransform;
 
-    private GameObject pickObject;
+    private GameObject pickedObject;
 
     private bool objectPicked;
 
@@ -15,7 +15,7 @@ public class CharacterGrabObjects : MonoBehaviour
     //{
     //   if(other.CompareTag("PickableObject") && Input.GetKeyDown(KeyCode.E))
     //    {
-    //        pickObject = other.gameObject;
+    //        pickedObject = other.gameObject;
     //    }
 
     //}
@@ -24,7 +24,7 @@ public class CharacterGrabObjects : MonoBehaviour
     {
         if(other.CompareTag("PickableObject"))
         {
-            pickObject = other.gameObject;
+            pickedObject = other.gameObject;
         }
     }
 
@@ -32,7 +32,7 @@ public class CharacterGrabObjects : MonoBehaviour
     {
         if (other.CompareTag("PickableObject"))
         {
-            pickObject = null;
+            pickedObject = null;
         }
     }
 
@@ -45,25 +45,28 @@ public class CharacterGrabObjects : MonoBehaviour
             if (objectPicked)
             {
                 objectPicked = false;
-                pickObject.GetComponent<Rigidbody>().isKinematic = false;
-                pickObject.transform.SetParent(null);
+                if (finalTransform.childCount > 0)
+                    pickedObject = finalTransform.GetChild(0).gameObject;
+
+                pickedObject.GetComponent<Rigidbody>().isKinematic = false;
+                pickedObject.transform.SetParent(null);
 
             }
             // Coge el obj
-            else if(pickObject != null)
+            else if(pickedObject != null)
             {
                 objectPicked = true;
-                pickObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickObject.transform.position = finalTransform.position;
-                pickObject.transform.SetParent(finalTransform);
+                pickedObject.GetComponent<Rigidbody>().isKinematic = true;
+                pickedObject.transform.position = finalTransform.position;
+                pickedObject.transform.SetParent(finalTransform);
             }
         }
        
-        //if( pickObject != null)
+        //if( pickedObject != null)
         //{
 
-        //    pickObject.GetComponent<Rigidbody>().isKinematic = true;
-        //    pickObject.transform.position = finalTransform.position;
+        //    pickedObject.GetComponent<Rigidbody>().isKinematic = true;
+        //    pickedObject.transform.position = finalTransform.position;
 
         //    if (Input.GetKeyDown(KeyCode.E)) {
         //        // aqui entra cuando lo coges >:D
@@ -72,8 +75,8 @@ public class CharacterGrabObjects : MonoBehaviour
         //}
         //else
         //{
-        //    pickObject.GetComponent<Rigidbody>().isKinematic = false;
-        //    pickObject   = null;
+        //    pickedObject.GetComponent<Rigidbody>().isKinematic = false;
+        //    pickedObject   = null;
         //}
     }
 
