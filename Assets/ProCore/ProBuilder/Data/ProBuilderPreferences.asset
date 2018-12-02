@@ -17,6 +17,13 @@ MonoBehaviour:
   - pbUVMaterialPreview
   - pb_UVTemplate_transparentBackground
   - pb_UVTemplate_hideGrid
+  - pb_TorusUsesInnerOuterMethod
+  - pbShowDetail
+  - pbShowCollider
+  - pbShowTrigger
+  - pbShowMover
+  - pb_SmoothingGroupEditor::m_ShowPreview
+  - pb_SmoothingGroupEditor::m_DrawNormals
   m_Int_keys:
   - pbHandleAlignment
   - pbDefaultEditLevel
@@ -32,10 +39,12 @@ MonoBehaviour:
   m_String_keys:
   - pb_UVTemplate_lineColor
   - pb_UVTemplate_backgroundColor
+  - pbCurrentMaterialPalette
+  - pbVertexColorPrefs4
   m_Color_keys: []
   m_Material_keys: []
-  m_Bool_values: 0001000101
-  m_Int_values: 00000000000000000200000001000000000000000000000000040000
+  m_Bool_values: 000100010101010101010101
+  m_Int_values: 01000000040000000200000001000000010000000000000000040000
   m_Float_values:
   - 0
   - 0
@@ -43,5 +52,7 @@ MonoBehaviour:
   m_String_values:
   - RGBA(0.000, 1.000, 0.000, 1.000)
   - RGBA(0.000, 0.000, 0.000, 1.000)
+  - Assets/ProCore/ProBuilder/Data/Default Material Palette.asset
+  - RGBA(0.471, 0.678, 0.157, 1.000)
   m_Color_values: []
   m_Material_values: []

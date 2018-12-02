@@ -56,5 +56,7 @@ public class CharacterMovement : MonoBehaviour
         moveDirection.y = moveDirection.y - (gravity * Time.deltaTime);
 
         controller.Move(moveDirection * Time.deltaTime);
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 }
