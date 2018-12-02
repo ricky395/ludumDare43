@@ -12,10 +12,6 @@ public class PickableObjectSriptableObject : ScriptableObject
 
     public string textoEmergente;
 
-    public GameObject prefab;
-
-    public PickableObject po;
-
 }
 
 

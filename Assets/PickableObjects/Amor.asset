@@ -9,10 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ef4bc57192fa15459a039f0af73bf0b, type: 3}
-  m_Name: Teddy
+  m_Name: Amor
   m_EditorClassIdentifier: 
-  objectName: Teddy
+  objectName: Having a partner
   importancia: 1
-  textoEmergente: lkjasdhfkjasdhfmn,bvcpioeghlkdsa nepe
-  prefab: {fileID: 1253247703412334, guid: be8078a943d76244599ff2af54520a23, type: 2}
-  po: {fileID: 0}
+  textoEmergente: would you give up having a partner?
