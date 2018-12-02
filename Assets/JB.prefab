@@ -24,10 +24,10 @@ GameObject:
   - component: {fileID: 23574289827335570}
   - component: {fileID: 33777040848885014}
   - component: {fileID: 114445890428669964}
-  - component: {fileID: 64165301533848898}
   - component: {fileID: 54021159339156354}
   - component: {fileID: 114703383901449356}
   - component: {fileID: 135885439462176132}
+  - component: {fileID: 65231948793016582}
   m_Layer: 9
   m_Name: JB
   m_TagString: PickableObject
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846806846374330}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.2, y: 2.3067, z: -0.067161}
+  m_LocalPosition: {x: -2.2, y: 2.3067, z: 0}
   m_LocalScale: {x: 0.48132592, y: 0.48132592, z: 0.48132592}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,10 +102,10 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 120
   m_CollisionDetection: 0
---- !u!64 &64165301533848898
-MeshCollider:
+--- !u!65 &65231948793016582
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -113,11 +113,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.1524879, y: 0.25897837, z: 4.6070137}
+  m_Center: {x: 0.53515095, y: 0.12948489, z: 2.168404}
 --- !u!114 &114333886238012820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2271,7 +2269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35d9f570af411648bc9f5a06554b057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableobject: {fileID: 11400000, guid: 11f72d944b0110a41b41e93fcceabfb2, type: 2}
+  scriptableobject: {fileID: 11400000, guid: 95e77127537e6b1409fee0ce880ef5b2, type: 2}
 --- !u!135 &135885439462176132
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2282,5 +2280,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0.53515095, y: 0.12948492, z: 2.1684046}
+  m_Radius: 2.3035069
+  m_Center: {x: 0.53515095, y: 0.12948489, z: 2.168404}

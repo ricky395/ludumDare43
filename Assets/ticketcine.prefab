@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 135556586043250550}
   - component: {fileID: 54414466007164904}
   - component: {fileID: 114902402043646324}
-  - component: {fileID: 64342726838297998}
+  - component: {fileID: 65079042767561080}
   m_Layer: 9
   m_Name: ticketcine
   m_TagString: PickableObject
@@ -102,10 +102,10 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 120
   m_CollisionDetection: 0
---- !u!64 &64342726838297998
-MeshCollider:
+--- !u!65 &65079042767561080
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -113,11 +113,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 7.9856825, y: 0.59648895, z: 6.2104445}
+  m_Center: {x: -1.8417377, y: 0.29824066, z: -3.1052222}
 --- !u!114 &114756490782904526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1515,7 +1513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35d9f570af411648bc9f5a06554b057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableobject: {fileID: 11400000, guid: 11f72d944b0110a41b41e93fcceabfb2, type: 2}
+  scriptableobject: {fileID: 11400000, guid: f71897b57eeb4454d8f8950d36a7caec, type: 2}
 --- !u!114 &114946423774343082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1562,5 +1560,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7.1
+  m_Radius: 3.9928412
   m_Center: {x: -1.8417377, y: 0.29824066, z: -3.1052222}

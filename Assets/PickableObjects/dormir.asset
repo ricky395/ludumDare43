@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Sleeping hours
   importancia: 1
-  textoEmergente: Whould you give up sleeping hours?
+  textoEmergente: Would you give up sleeping hours?

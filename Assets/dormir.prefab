@@ -24,10 +24,10 @@ GameObject:
   - component: {fileID: 23923460307905746}
   - component: {fileID: 33520382755364290}
   - component: {fileID: 114850470837278502}
-  - component: {fileID: 64033902642624696}
   - component: {fileID: 135757324462044418}
   - component: {fileID: 54562829393230970}
   - component: {fileID: 114765098868465504}
+  - component: {fileID: 65619508651077136}
   m_Layer: 9
   m_Name: dormir
   m_TagString: PickableObject
@@ -102,10 +102,10 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 120
   m_CollisionDetection: 0
---- !u!64 &64033902642624696
-MeshCollider:
+--- !u!65 &65619508651077136
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -113,11 +113,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.158022, y: 0.16874278, z: 1.5036947}
+  m_Center: {x: 1.0978842, y: 0.084370315, z: 0.74555594}
 --- !u!114 &114540065608780140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35d9f570af411648bc9f5a06554b057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableobject: {fileID: 11400000, guid: 11f72d944b0110a41b41e93fcceabfb2, type: 2}
+  scriptableobject: {fileID: 11400000, guid: 98dcec402b47386419992869f2225704, type: 2}
 --- !u!114 &114850470837278502
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -59,6 +59,8 @@ public class CharacterGrabObjects : MonoBehaviour
                 pickedObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedObject.transform.position = finalTransform.position;
                 pickedObject.transform.SetParent(finalTransform);
+
+                GameController.instance.panel.gameObject.SetActive(false);
             }
         }
        
