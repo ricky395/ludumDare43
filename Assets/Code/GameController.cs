@@ -29,7 +29,6 @@ public class GameController : MonoBehaviour
     public Text description;
 
     public Transform puerta;
-    public Transform camera;
 
     List<GameObject> allPickables;
 
@@ -48,8 +47,7 @@ public class GameController : MonoBehaviour
         ++numeroDeDesintegraciones;
         if (numeroDeDesintegraciones == 3)
         {
-            puerta.DORotate(new Vector3(0, 90, 0), 0.4f);
-            camera.DOMoveX(25, 1f);
+            puerta.DORotate(new Vector3(0, -90, 0), 0.4f);
         }
     }
 }
