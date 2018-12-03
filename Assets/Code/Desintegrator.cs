@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Desintegrator : MonoBehaviour {
+public class Desintegrator : MonoBehaviour
+{
 
-
+    
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("TriggerEnter");
@@ -13,6 +14,7 @@ public class Desintegrator : MonoBehaviour {
             Debug.Log("DELETE OBJ!");
             GameController.instance.DeleteObject(other.gameObject);
             Destroy(other.gameObject);
+            GameController.instance.incrementarNumeroDeDesintegraciones();
         }
     }
 }
