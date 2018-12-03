@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using DG.Tweening;
 
 public class GameController : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour
     public Text description;
 
     public Transform puerta;
+    public Transform camera;
 
     List<GameObject> allPickables;
 
@@ -41,15 +43,13 @@ public class GameController : MonoBehaviour
         allPickables.Remove(obj);
     }
 
-
-    public void incrementarNumeroDeDesintegraciones()
+    public void IncrementarNumeroDeDesintegraciones()
     {
-        numeroDeDesintegraciones++;
-        if (numeroDeDesintegraciones >= 3)
+        ++numeroDeDesintegraciones;
+        if (numeroDeDesintegraciones == 3)
         {
-
-            //puerta.rotation = Quaternion.Lerp( puerta.rotation, Quaternion.Euler(0, -90, 0) ,Time.deltaTime);
-            puerta.Rotate(new Vector3(0, -90, 0));
+            puerta.DORotate(new Vector3(0, 90, 0), 0.4f);
+            camera.DOMoveX(25, 1f);
         }
     }
 }
