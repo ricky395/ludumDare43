@@ -20,7 +20,7 @@ public class PickableObject : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            GameController.instance.name.text = scriptableobject.name;
+            GameController.instance.objName.text = scriptableobject.name;
             GameController.instance.description.text = scriptableobject.textoEmergente;
 
             GameController.instance.panel.gameObject.SetActive(true);
