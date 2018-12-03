@@ -2365,7 +2365,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh116544
+  m_Name: pb_Mesh12106
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -9969,7 +9969,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-3393144
+  m_Name: pb_Mesh-1360
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -10184,6 +10184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1001036037}
+  door: {fileID: 2097829478}
 --- !u!54 &1623301125
 Rigidbody:
   m_ObjectHideFlags: 0

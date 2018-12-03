@@ -7,6 +7,8 @@ public class MovingInterr : MonoBehaviour
 {
     public Transform camera;
 
+    public Transform door;
+
     private float speed = 40;
 
     void Start ()
@@ -25,6 +27,7 @@ public class MovingInterr : MonoBehaviour
         {
             Destroy(this.gameObject);
             camera.DOMoveX(25, 1f);
+            door.DORotate(Vector2.zero, 0.3f);
         }
     }
 }
