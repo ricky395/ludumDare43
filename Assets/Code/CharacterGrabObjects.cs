@@ -10,18 +10,11 @@ public class CharacterGrabObjects : MonoBehaviour
     private GameObject pickedObject;
 
     private bool objectPicked;
-
-    //private void OnTriggerStay(Collider other)
-    //{
-    //   if(other.CompareTag("PickableObject") && Input.GetKeyDown(KeyCode.E))
-    //    {
-    //        pickedObject = other.gameObject;
-    //    }
-
-    //}
+    
 
     private void OnTriggerEnter(Collider other)
     {
+        // Stores object to pick
         if(other.CompareTag("PickableObject"))
         {
             pickedObject = other.gameObject;
@@ -36,12 +29,11 @@ public class CharacterGrabObjects : MonoBehaviour
         }
     }
 
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // Suelta el obj
+            // Drop the object
             if (objectPicked)
             {
                 objectPicked = false;
@@ -52,62 +44,19 @@ public class CharacterGrabObjects : MonoBehaviour
                 pickedObject.transform.SetParent(null);
 
             }
-            // Coge el obj
+            // Take the object
             else if(pickedObject != null)
             {
+                // Set the object position and parent
                 objectPicked = true;
                 pickedObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedObject.transform.position = finalTransform.position;
                 pickedObject.transform.SetParent(finalTransform);
 
+                // Disables object description
                 GameController.instance.panel.gameObject.SetActive(false);
             }
         }
-       
-        //if( pickedObject != null)
-        //{
-
-        //    pickedObject.GetComponent<Rigidbody>().isKinematic = true;
-        //    pickedObject.transform.position = finalTransform.position;
-
-        //    if (Input.GetKeyDown(KeyCode.E)) {
-        //        // aqui entra cuando lo coges >:D
-        //        print("soltar");
-        //    }
-        //}
-        //else
-        //{
-        //    pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-        //    pickedObject   = null;
-        //}
     }
-
-
-
-
-
-    //    　　　　　　　　▄█▀█▀█▄
-    //　　　　　　　　▄█▀　　█　　▀█▄
-    //　　　　　　　▄█▀　　　　　　　▀█▄
-    //　　　　　　　█　　　　　　　　　█
-    //　　　　　　　█　　　　　　　　　█
-    //　　　　　　　▀█▄▄　　█　　　▄█▀
-    //　　　　　　　　　█　　▄▀▄　　█
-    //　　　　　　　　　█　▀　　　▀　█
-    //　　　　　　　　　█　　　　　　　█
-    //　　　　　　　　　█　　　　　　　█
-    //　　　　　　　　　█　　　　 　　 █
-    //　　　　　　　　　█　　　　　　　█
-    //　　　　　　　　　█　　　　　　　█
-    //　　　▄█▀▀█▄█▀▀▀▀　　　　　　　█▄█▀█▄
-    //　▄█▀▀　　　　      　　　　　　　　　▀▀█
-    //█▀　　　　　　　　　　　　　　　　　　　▀█
-    //█　　　　　　　　　　　　　　　　　　　　　█
-    //█　　　　　　　　　　　▄█▄　　　　　　　　　█
-    //▀█　　　　　　　　　█▀　▀█　　　　　　　　█▀
-    //　▀█▄　　　　　　█▀　　　▀█　　　　　▄█▀
-    //　　　▀█▄▄▄█▀　　　　　　▀█▄▄▄█▀
-
-
-
+    
 }

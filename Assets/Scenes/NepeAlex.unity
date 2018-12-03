@@ -10336,10 +10336,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numeroDeDesintegraciones: 0
   panel: {fileID: 444189234}
-  name: {fileID: 365526107}
+  objName: {fileID: 365526107}
   description: {fileID: 868596732}
   puerta: {fileID: 2097829478}
-  camera: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!4 &1805643495
 Transform:
   m_ObjectHideFlags: 0
