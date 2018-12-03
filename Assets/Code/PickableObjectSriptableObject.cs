@@ -11,7 +11,7 @@ public class PickableObjectSriptableObject : ScriptableObject
     public int importancia;
 
     public string textoEmergente;
-
+    
 }
 
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -29,12 +30,23 @@ public class GameController : MonoBehaviour
     public Text description;
 
     public Transform puerta;
+    public Transform camera;
 
     List<GameObject> allPickables;
 
     private void Start()
     {
+        numeroDeDesintegraciones = 0;
         allPickables = GameObject.FindGameObjectsWithTag("PickableObject").ToList();
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     public void DeleteObject(GameObject obj)
@@ -47,7 +59,8 @@ public class GameController : MonoBehaviour
         ++numeroDeDesintegraciones;
         if (numeroDeDesintegraciones == 3)
         {
-            puerta.DORotate(new Vector3(0, -90, 0), 0.4f);
+            puerta.DORotate(new Vector3(0, 90, 0), 0.4f);
+            camera.DOMoveX(25, 1f);
         }
     }
 }

@@ -6,6 +6,14 @@ public class PickableObject : MonoBehaviour {
 
     public PickableObjectSriptableObject scriptableobject;
 
+    private void Update()
+    {
+        if(this.gameObject.CompareTag("Puerta") && GameController.instance.numeroDeDesintegraciones < 3)
+        {
+            scriptableobject.textoEmergente = "Necessary sacrifices: 3  Current sacrifices: "+GameController.instance.numeroDeDesintegraciones;
+        }
+    }
+
 
 
     private void OnTriggerEnter(Collider other)
